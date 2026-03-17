@@ -9,61 +9,49 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        
+        // Getting standard fonts
+        // Text Styles
         VStack(alignment: .leading) {
-            Text(".font(.largeTitle)")
-                .foregroundStyle(.gray)
-            Text("Hello, world!")
+            Text("largeTitle")
                 .font(.largeTitle)
-            
-            Text(".font(.title)")
-                .foregroundStyle(.gray)
-            Text("Hello, world!")
+            Text("title")
                 .font(.title)
-            
-            Text(".font(.title2)")
-                .foregroundStyle(.gray)
-            Text("Hello, world!")
+            Text("title2")
                 .font(.title2)
-            
-            Text(".font(.title3)")
-                .foregroundStyle(.gray)
-            Text("Hello, world!")
+            Text("title3")
                 .font(.title3)
-            
-            Text(".font(.headline)")
-                .foregroundStyle(.gray)
-            Text("Hello, world!")
+            Text("headline")
                 .font(.headline)
-            
-            Text(".font(.subheadline)")
-                .foregroundStyle(.gray)
-            Text("Hello, world!")
+            Text("subheadline")
                 .font(.subheadline)
-            
-            Text(".font(.body)")
-                .foregroundStyle(.gray)
-            Text("Hello, world!")
+            Text("body")
                 .font(.body)
-            
-            Text(".font(.callout)")
-                .foregroundStyle(.gray)
-            Text("Hello, world!")
+            Text("callout")
                 .font(.callout)
-            
-            Text(".font(.caption)")
-                .foregroundStyle(.gray)
-            Text("Hello, world!")
+            Text("caption")
                 .font(.caption)
-            
-            Text(".font(.caption2)")
-                .foregroundStyle(.gray)
-            Text("Hello, world!")
+            Text("caption2")
                 .font(.caption2)
-            
-            Text(".font(.footnote)")
-                .foregroundStyle(.gray)
-            Text("Hello, world!")
+            Text("footnote")
                 .font(.footnote)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding()
+        
+        // Getting system fonts
+        VStack(alignment: .leading) {
+            Text("System Fonts: headline, Serif, Bold")
+                .font(.system(.headline, design: .serif, weight: .bold))
+            
+            Text("System Fonts: size 16, heavy, rounded")
+                .font(.system(size: 16, weight: .heavy, design: .rounded))
+            
+            Text("System Fonts: size 12, heavy, monospaced")
+                .font(.system(size: 12, weight: .heavy, design: .monospaced))
+            
+            Text("System Fonts: size 14, light, monospaced")
+                .font(.system(size: 14, weight: .light, design: .monospaced))
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
