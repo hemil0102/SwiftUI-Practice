@@ -55,6 +55,34 @@ struct ContentView: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
+        
+        // Styling fonts
+        VStack(alignment: .leading) {
+            Text("italic fonts")
+                .italic()
+            Text("bold fonts")
+                .bold()
+            Text("monospaced fonts")
+                .monospaced()
+            Text("monospacedDigit fonts")
+                .monospacedDigit()
+            
+            // 이거 왜 안되지??
+            // Text("smallCaps fonts")
+            //    .smallCaps()
+            
+            // Text("lowercaseSmallCaps fonts")
+            //    .lowercaseSmallCaps()
+            
+            // Text("uppercaseSmallCaps fonts")
+            //    .uppercaseSmallCaps()
+            
+            Text("System Fonts: size 14, light, monospaced, italic")
+                .font(.system(size: 14, weight: .light, design: .monospaced))
+                .italic()
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding()
     }
 }
 
