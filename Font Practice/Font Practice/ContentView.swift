@@ -67,15 +67,17 @@ struct ContentView: View {
             Text("monospacedDigit fonts")
                 .monospacedDigit()
             
-            // 이거 왜 안되지??
-            // Text("smallCaps fonts")
-            //    .smallCaps()
+            // 모든 글자를 작은 대문자로 변환시킨다.
+            Text("smallCaps fonts")
+                .font(.body.smallCaps())
             
-            // Text("lowercaseSmallCaps fonts")
-            //    .lowercaseSmallCaps()
+            // 소문자를 작은 대문자로 변환시킨다.
+            Text("lowercaseSmallCaps fonts")
+                .font(.body.lowercaseSmallCaps())
             
-            // Text("uppercaseSmallCaps fonts")
-            //    .uppercaseSmallCaps()
+            // 대문자만 작은 대문자로 변환시킨다.
+            Text("uppercaseSmallCaps fonts")
+                .font(.body.uppercaseSmallCaps())
             
             Text("System Fonts: size 14, light, monospaced, italic")
                 .font(.system(size: 14, weight: .light, design: .monospaced))
