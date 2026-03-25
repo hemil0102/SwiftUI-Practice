@@ -82,6 +82,26 @@ struct ContentView: View {
             Text("System Fonts: size 14, light, monospaced, italic")
                 .font(.system(size: 14, weight: .light, design: .monospaced))
                 .italic()
+            
+            // weight를 통해 폰트에 bold 효과 적용
+            Text("weight .body .bold fonts")
+                .font(.body.weight(.bold))
+            
+            // width 적용
+            // static let compressed: Font.Width
+            // static let condensed: Font.Width
+            // static let expanded: Font.Width
+            // static let standard: Font.Width
+            Text("width .body .compressed fonts")
+                .font(.body.width(.compressed))
+            Text("width .body .condensed fonts")
+                .font(.body.width(.condensed))
+            Text("width .body .expanded fonts")
+                .font(.body.width(.expanded))
+            Text("width .body .standard fonts")
+                .font(.body.width(.standard))
+            
+            
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
