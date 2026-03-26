@@ -100,6 +100,8 @@ struct ContentView: View {
                 .font(.body.width(.expanded))
             Text("width .body .standard fonts")
                 .font(.body.width(.standard))
+            Text("width .body .width.0.2 fonts")
+                .font(.body.width(.init(0.2)))
             
             
         }
