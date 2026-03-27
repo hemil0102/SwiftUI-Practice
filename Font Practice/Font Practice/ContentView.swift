@@ -12,32 +12,32 @@ struct ContentView: View {
         
         // Getting standard fonts
         // Text Styles
-        VStack(alignment: .leading) {
-            Text("largeTitle")
-                .font(.largeTitle)
-            Text("title")
-                .font(.title)
-            Text("title2")
-                .font(.title2)
-            Text("title3")
-                .font(.title3)
-            Text("headline")
-                .font(.headline)
-            Text("subheadline")
-                .font(.subheadline)
-            Text("body")
-                .font(.body)
-            Text("callout")
-                .font(.callout)
-            Text("caption")
-                .font(.caption)
-            Text("caption2")
-                .font(.caption2)
-            Text("footnote")
-                .font(.footnote)
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding()
+//        VStack(alignment: .leading) {
+//            Text("largeTitle")
+//                .font(.largeTitle)
+//            Text("title")
+//                .font(.title)
+//            Text("title2")
+//                .font(.title2)
+//            Text("title3")
+//                .font(.title3)
+//            Text("headline")
+//                .font(.headline)
+//            Text("subheadline")
+//                .font(.subheadline)
+//            Text("body")
+//                .font(.body)
+//            Text("callout")
+//                .font(.callout)
+//            Text("caption")
+//                .font(.caption)
+//            Text("caption2")
+//                .font(.caption2)
+//            Text("footnote")
+//                .font(.footnote)
+//        }
+//        .frame(maxWidth: .infinity, alignment: .leading)
+//        .padding()
         
         // Getting system fonts
         VStack(alignment: .leading) {
@@ -102,7 +102,12 @@ struct ContentView: View {
                 .font(.body.width(.standard))
             Text("width .body .width.0.2 fonts")
                 .font(.body.width(.init(0.2)))
-            
+            Text("standard\nstandard\nstandard")
+                .font(.body.leading(.standard))
+            Text("loose\nloose\nloose")
+                .font(.body.leading(.loose))
+            Text("tight\ntight\ntight")
+                .font(.body.leading(.tight))
             
         }
         .frame(maxWidth: .infinity, alignment: .leading)
