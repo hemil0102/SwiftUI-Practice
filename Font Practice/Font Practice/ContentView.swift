@@ -108,7 +108,8 @@ struct ContentView: View {
                 .font(.body.leading(.loose))
             Text("tight\ntight\ntight")
                 .font(.body.leading(.tight))
-            
+            Text("Font .body.bold true")
+                .font(.body.bold(false))
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
@@ -118,3 +119,4 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
