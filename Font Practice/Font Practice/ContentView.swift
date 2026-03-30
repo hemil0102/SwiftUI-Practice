@@ -110,6 +110,10 @@ struct ContentView: View {
                 .font(.body.leading(.tight))
             Text("Font .body.bold true")
                 .font(.body.bold(false))
+            
+            // 커스텀 폰트 적용하기 https://semin1127.tistory.com/78
+            Text("Custom Font")
+                .font(.caveat)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
