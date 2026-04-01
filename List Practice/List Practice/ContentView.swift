@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    private let items = ["사과", "바나나", "체리", "포도", "오렌지"]
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                ForEach(items, id: \.self) { item in
+                    HStack {
+                        Image(systemName: "checkmark.circle")
+                            .foregroundStyle(.tint)
+                        Text(item)
+                    }
+                }
+            }
+            .navigationTitle("과일 리스트")
         }
-        .padding()
     }
 }
 
