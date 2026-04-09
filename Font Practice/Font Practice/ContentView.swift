@@ -114,6 +114,10 @@ struct ContentView: View {
             // 커스텀 폰트 적용하기 https://semin1127.tistory.com/78
             Text("Custom Font")
                 .font(.caveat)
+            
+            // context와 resolved 확인하기
+            // 사용할 수 있는건가?
+
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
