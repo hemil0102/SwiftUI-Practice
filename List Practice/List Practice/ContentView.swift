@@ -23,6 +23,11 @@ private var oceans = [
 ]
 
 struct ContentView: View {
+    @State private var multiSelection = Set<UUID>()
+    @State private var editMode: EditMode = .active
+    
+    @State private var singleSelection = UUID()
+    
     var body: some View {
         List {
             Text("A List Item")
@@ -30,8 +35,13 @@ struct ContentView: View {
             Text("A Third List Item")
         }
         
-        List(oceans) {
-            Text($0.name)
+        NavigationView {
+            List(oceans, selection: $multiSelection) {
+                Text($0.name)
+            }
+            .environment(\.editMode, $editMode)
+            // .navigationTitle("Oceans")
+            // .toolbar { EditButton() }
         }
     }
 }
